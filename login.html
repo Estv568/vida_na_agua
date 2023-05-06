@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário de Login</title>
+
+    <link rel="stylesheet" href="folha.css">
+
+   <script type="text/javascript">
+   function validar(){
+    
+    var n = document.getElementById("usuario").value;
+    var o = document.getElementById("senha").value;
+
+    if(n==""){
+        window.alert("Digite o nome");
+      
+                    document.getElementById("usuario").focus();
+                    document.getElementById("usuario").style.backgroundColor="#f00";
+                    return false;
+    }
+    
+    else if(o==""){
+        window.alert("Digite a senha");
+      
+                    document.getElementById("senha").focus();
+                    document.getElementById("senha").style.backgroundColor="#f00";
+                    return false;
+    }
+    else{
+        window.alert("login ok");
+      return true;
+    }
+}
+   </script>
+
+</head>
+  
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a href="faleConosco.html">Fale Conosco</a></li>
+    </ul>
+</nav>
+<main>
+    <h1 id="b">Login</h1>
+    <form action="vida1.html" method="post"  onsubmit="return validar()">
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" name="usuario"><br><br>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha"><br><br>
+      <input type="submit" value="Entrar">
+    </form>
+    <form action="index.html">
+        <input type="submit" value="Voltar">
+    </form>
+    <div>
+      <div >
+          <a class="button floatLeft"  href="cadastro.html" >cadastro</a></div>
+      <div>
+          <a class="button floatLeft" href="esqueciSenha.html" >Esqueci minha senha</a></div>
+    </div>
+    </main>
+    
+    </nav>
+  </main>
+  </body>
+</html>
